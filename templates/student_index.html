@@ -5,10 +5,10 @@
         <!--内容-->
     {% block content %}
         <section class="content-header">
-            <h1>港口管理</h1>
+            <h1>签到信息</h1>
             <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i>港口管理</a></li>
-                <li class="active">港口列表</li>
+                <li><a href="#"><i class="fa fa-dashboard"></i>签到信息</a></li>
+                <li class="active">签到信息</li>
             </ol>
         </section>
         <section class="content" id="showcontent">
@@ -16,7 +16,8 @@
                 <div class="col-md-12">
                     <div class="box box-primary">
                         <div class="box-header">
-                            <h3 class="box-title">港口列表</h3>
+                            <h3 class="box-title">签到信息</h3>
+                                 &nbsp;&nbsp;&nbsp;&nbsp;<a class="label label-success" href="/qiandao/">立即签到</a>
                             <div class="box-tools">
                                 <div class="input-group input-group-sm" style="width: 150px;">
                                     <input type="text" name="table_search" class="form-control pull-right"
@@ -33,34 +34,26 @@
                             <table class="table table-hover">
                                 <tbody>
                                 <tr>
-                                    <th>编号</th>
-                                    <th>港口名</th>
-                                    <th>船舶状态</th>
-                                    <th>空闲天数</th>
-                                    <th>工作天数</th>
-                                    <th>ETA</th>
-                                    <th>ETD</th>
-                                    <th>港口费用</th>
-                                    <th>航程距离</th>
-                                    <th>在航天数</th>
+                                    <th>ID</th>
+                                    <th>姓名</th>
+                                    <th>班级</th>
+                                    <th>签到情况</th>
+                                    <th>签到时间</th>
                                 </tr>
-                                 {% for p_port in pportlist %}
+                                 {% for p_port in qians %}
                                 <tr>
-                                    <td>{{p_port.id }}</td>
-                                    <td>{{p_port.Pport_name}}</td>
-                                    <td>{{p_port.Pport_shipstate }}</td>
-                                    <td>{{p_port.Pport_leisureday }}</td>
-                                    <td>{{p_port.Pport_workday }}</td>
-                                    <td>{{p_port.Pport_eta }}</td>
-                                    <td>{{p_port.Pport_etd }}</td>
-                                    <td>{{p_port.Pport_cost }}</td>
-                                    <td>{{p_port.Pport_range }}</td>
-                                    <td>{{p_port.Pport_shipday }}</td>
-                                    <td>
-                                        <a class="label label-success">编辑</a>
-                                        &nbsp;
-                                        <a class="label label-danger">删除</a>
-                                    </td>
+                                        <td>{{p_port.q_id }}</td>
+                                    <td>{{p_port.Student_name }}</td>
+                                    <td>{{p_port.Student_name.Student_class }}</td>
+                                    <td>{{p_port.qiandao}}</td>
+                                    <td>{{p_port.qiandao_time |date:"Y-m-d H:i:s" }}</td>
+
+{##}
+{#                                    <td>#}
+{#                                        <a  href="/qiandao_edit/{{  p_port.q_id}}/" class="label label-success">编辑</a>#}
+{#                                        &nbsp;#}
+{#                                        <a  href="/qiandao_del/{{  p_port.q_id }}/" class="label label-danger">删除</a>#}
+{#                                    </td>#}
                                 </tr>
                                 {% endfor %}
                                 </tbody>

@@ -3,13 +3,13 @@
 
 {% block content %}
     <div class="container" >
-        <h1>航次编辑</h1>
+        <h1>签到信息编辑编辑</h1>
          <div class="col-md-12">
          <p style="color: red">{{ pship_errors }}</p>
      </div>
         <form method="POST">
             {% csrf_token %}
-            {% for  pport in  pshiplist %}
+            {% for  pport in  personform %}
                 <div class="form-group col-md-6">
                     <label class="col-md-3 control-label">{{ pport.label }}</label>
                    <div class="col-md-9" style="position: relative;">{{ pport }}</div>

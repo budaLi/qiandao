@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>xxx系统</title>
+    <title>学生签到信息系统</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <link rel="shortcut icon" href="/static/base/images/logo.png">
+    <link rel="shortcut icon" href="/static/base/images/st.png">
     <link rel="stylesheet" href="/static/admin/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/fonts/css/font-awesome.min.css">
     <link rel="stylesheet" href="/static/ionicons/css/ionicons.min.css">
@@ -27,10 +27,10 @@
 <div class="wrapper">
     <header class="main-header">
         <a href="index.html" class="logo">
-            <span class="logo-mini"><img src="/static/base/images/logo.png"
-                                         style="height:40px;width:40px;">xx系统</span>
-            <span class="logo-lg"><img src="/static/base/images/logo.png"
-                                       style="height:40px;width:40px;">xxx管理系统</span>
+            <span class="logo-mini"><img src="/static/base/images/st.png"
+                                         style="height:40px;width:40px;">学生签到信息系统</span>
+            <span class="logo-lg"><img src="/static/base/images/st.png"
+                                       style="height:40px;width:40px;">学生签到信息系统</span>
         </a>
         <nav class="navbar navbar-static-top">
             <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
@@ -49,7 +49,7 @@
                                 <img src="/static/admin/dist/img/user2-160x160.jpg"
                                      class="img-circle" alt="User Image">
                                 <p>
-                                    xxx
+                                    {{ user }}
                                     <small>2017-06-01</small>
                                 </p>
                             </li>
@@ -77,7 +77,7 @@
                          alt="User Image">
                 </div>
                 <div class="pull-left info">
-                    <p>用户xxx</p>
+                    <p>用户  {{ user }}</p>
                     <a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
                 </div>
             </div>
@@ -110,13 +110,13 @@
                 <li class="treeview">
                     <a href="#">
                         <i class="fa fa-tags" aria-hidden="true"></i>
-                        <span>计算航程信息</span>
+                        <span>签到信息</span>
                         <span class="label label-primary pull-right">1</span>
                     </a>
                     <ul class="treeview-menu">
                         <li>
-                            <a href="/pship_list/">
-                                <i class="fa fa-circle-o"></i> 航次信息
+                            <a href="#">
+                                <i class="fa fa-circle-o"></i> 签到信息
                             </a>
                         </li>
 
@@ -131,22 +131,22 @@
 {#                            </a>#}
 {#                        </li>#}
                     </ul>
-                </li>
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-file-video-o" aria-hidden="true"></i>
-                        <span>航次详细信息</span>
-                        <span class="label label-primary pull-right">1  </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li>
-                            <a href="/all_info/">
-                                <i class="fa fa-circle-o"></i> 详细信息
-                            </a>
-
-
-                        </li>
-
+{#                </li>#}
+{#                <li class="treeview">#}
+{#                    <a href="#">#}
+{#                        <i class="fa fa-file-video-o" aria-hidden="true"></i>#}
+{#                        <span>航次详细信息</span>#}
+{#                        <span class="label label-primary pull-right">1  </span>#}
+{#                    </a>#}
+{#                    <ul class="treeview-menu">#}
+{#                        <li>#}
+{#                            <a href="/all_info/">#}
+{#                                <i class="fa fa-circle-o"></i> 详细信息#}
+{#                            </a>#}
+{##}
+{##}
+{#                        </li>#}
+{##}
 {##}
 {#                    </ul>#}
 {#                </li>#}
